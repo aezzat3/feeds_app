@@ -10,20 +10,20 @@
 npm install or yarn install
 ```
 
-*Before run android build, setup [Android Studio](https://facebook.github.io/react-native/docs/android-setup.html)*
+_Before run android build, setup [Android Studio](https://facebook.github.io/react-native/docs/android-setup.html)_
 
 **Step 3:** If Android
 
 ```
-react-native run-android
+yarn run android
 ```
 
-*Before running iOS build, Install [Xcode](https://developer.apple.com/xcode/download/)*
+_Before running iOS build, Install [Xcode](https://developer.apple.com/xcode/download/)_
 
 **Step 4:** If iOS
 
 ```
-react-native run-ios
+yarn run ios
 ```
 
 That's all
