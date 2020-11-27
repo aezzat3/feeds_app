@@ -5,8 +5,10 @@ import Home from '../../screens/Home';
 import Search from '../../screens/Search';
 import Notification from '../../screens/Notification';
 import Profile from '../../screens/Profile';
-import {ICONS, COLORS} from '../../common';
+import {ICONS} from '../../common';
 import {AppIcon} from '../../components';
+import {HomeHeader} from '../Headers/home';
+import {SharedHeader} from '../Headers/shared';
 
 const tabs_options = () => ({
   HomeTab: {
@@ -33,7 +35,7 @@ const HomeStack = () => (
     <HomeNav.Screen
       component={Home}
       name={'Home'}
-      //   options={{header: () => <HomeHeader />}}
+      options={{header: () => <HomeHeader title={'HOME'} />}}
     />
   </HomeNav.Navigator>
 );
@@ -43,7 +45,7 @@ const SearchStack = () => (
     <SearchNav.Screen
       component={Search}
       name={'Search'}
-      //   options={{header: () => <HomeHeader />}}
+      options={{header: () => <SharedHeader title={'SEARCH'} />}}
     />
   </SearchNav.Navigator>
 );
@@ -53,18 +55,14 @@ const NotificationStack = () => (
     <NotificationNav.Screen
       component={Notification}
       name={'Notification'}
-      //   options={{header: () => <HomeHeader />}}
+      options={{header: () => <SharedHeader title={'NOTIFICATION'} />}}
     />
   </NotificationNav.Navigator>
 );
 const ProfileNav = createStackNavigator();
 const ProfileStack = () => (
-  <ProfileNav.Navigator>
-    <ProfileNav.Screen
-      component={Profile}
-      name={'Profile'}
-      //   options={{header: () => <HomeHeader />}}
-    />
+  <ProfileNav.Navigator headerMode={'none'}>
+    <ProfileNav.Screen component={Profile} name={'Profile'} />
   </ProfileNav.Navigator>
 );
 
@@ -85,8 +83,6 @@ const TabNavigator = () => {
         ),
       })}
       tabBarOptions={{
-        activeTintColor: COLORS.redishOrange,
-        inactiveTintColor: COLORS.blueyGrey,
         labelPosition: 'below-icon',
       }}>
       <BottomTab.Screen component={HomeStack} name={'HomeTab'} />

@@ -3,4 +3,6 @@ export const ICONS = {
   magnify: 'magnify',
   notification: 'bell-outline',
   account: 'account-outline',
+  chat: 'chat-outline',
+  heart: 'heart-outline',
 };
