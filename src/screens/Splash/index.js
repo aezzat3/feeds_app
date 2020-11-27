@@ -8,14 +8,13 @@ import {navigateToAuth} from '../../navigation/navigator';
 
 const Splash = () => {
   const navigation = useNavigation();
-  console.log('SOPPPPPPPPPPPPP');
   useEffect(() => {
     startup();
   }, []);
 
   const startup = async () => {
     setTimeout(() => {
-      // navigateToAuth(navigation);
+      navigateToAuth(navigation);
     }, 3000);
   };
 

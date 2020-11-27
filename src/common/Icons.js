@@ -1,3 +1,6 @@
 export const ICONS = {
-  phone: 'phone',
+  home: 'home-outline',
+  magnify: 'magnify',
+  notification: 'bell-outline',
+  account: 'account-outline',
 };

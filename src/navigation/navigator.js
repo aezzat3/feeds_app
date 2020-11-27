@@ -3,7 +3,7 @@ export const navigateToAuth = (navigation) => {
   navigation.reset({
     routes: [
       {
-        name: 'Auth',
+        name: 'Tabs',
       },
     ],
   });

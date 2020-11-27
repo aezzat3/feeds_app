@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import Tabs from './Tabs';
 
 import Splash from '../screens/Splash';
 
@@ -12,8 +13,11 @@ const RootNavigation = () => {
   return (
     <RootStack.Navigator headerMode={'none'}>
       <RootStack.Screen name={'Splash'} component={Splash} />
-      {/* <RootStack.Screen name={'Auth'} component={AuthStack} /> */}
-      {/* <RootStack.Screen name={'Main'} component={MainStack} /> */}
+      <RootStack.Screen
+        component={Tabs}
+        name={'Tabs'}
+        options={{headerShown: false}}
+      />
     </RootStack.Navigator>
   );
 };
