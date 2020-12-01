@@ -1,9 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import {View, Image} from 'react-native';
+import React, {useState} from 'react';
+import {View, Image, TouchableOpacity} from 'react-native';
+import {COLORS, ICONS} from '../../common';
+import {AppIcon} from '../AppIcon';
 import {AppText} from '../AppText';
 import styles from './styles';
 let FeedCard = ({data}) => {
+  const [like, setlike] = useState(false);
+
   return (
     <View style={styles.continer}>
       <View style={styles.cardHeader}>
@@ -30,6 +34,29 @@ let FeedCard = ({data}) => {
             }}
           />
         )}
+      </View>
+      <View style={styles.lineStyle} />
+      <View style={styles.footerStyle}>
+        <TouchableOpacity
+          onPress={() => {
+            setlike((prev) => !prev);
+          }}>
+          <AppIcon
+            icomoon
+            color={like ? COLORS.watermelon : COLORS.dark}
+            name={like ? ICONS.heartP : ICONS.heart}
+            size={20}
+          />
+        </TouchableOpacity>
+        <AppText>likes</AppText>
+        <TouchableOpacity onPress={() => {}}>
+          <AppIcon icomoon name={ICONS.chat} size={20} />
+        </TouchableOpacity>
+        <AppText>comments</AppText>
+        <TouchableOpacity onPress={() => {}}>
+          <AppIcon icomoon name={ICONS.share} size={20} />
+        </TouchableOpacity>
+        <AppText>share</AppText>
       </View>
     </View>
   );

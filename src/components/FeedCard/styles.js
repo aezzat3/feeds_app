@@ -40,5 +40,20 @@ const styles = StyleSheet.create({
     height: '90%',
     marginTop: calcHeight(10),
   },
+  lineStyle: {
+    borderWidth: 0.2,
+    width: '100%',
+    alignSelf: 'center',
+    backgroundColor: COLORS.dark,
+    marginVertical: calcHeight(10),
+  },
+  footerStyle: {
+    height: calcHeight(30),
+    width: '80%',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignSelf: 'flex-start',
+    marginLeft: calcWidth(10),
+  },
 });
 export default styles;

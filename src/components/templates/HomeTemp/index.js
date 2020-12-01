@@ -1,5 +1,5 @@
 //import liraries
-import React from 'react';
+import React, {useState} from 'react';
 import {FlatList, SafeAreaView} from 'react-native';
 import {activities} from '../../../mock/data';
 import {FeedCard} from '../../FeedCard';

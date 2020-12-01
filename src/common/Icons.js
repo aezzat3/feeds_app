@@ -5,4 +5,6 @@ export const ICONS = {
   account: 'account-outline',
   chat: 'chat-outline',
   heart: 'heart-outline',
+  heartP: 'cards-heart',
+  share: 'share-outline',
 };
